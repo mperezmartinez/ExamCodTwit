@@ -5,7 +5,6 @@
  */
 package examcodtwit;
 
-
 import java.util.List;
 import java.util.logging.Level;
 import javax.swing.JOptionPane;
@@ -23,7 +22,6 @@ import twitter4j.conf.ConfigurationBuilder;
  */
 public class MetodosTwit {
 
-    ConfigurationBuilder cb = new ConfigurationBuilder();
     Twitter twitter;
 
     /**
@@ -31,12 +29,7 @@ public class MetodosTwit {
      */
     public MetodosTwit() {
 
-        cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("************")
-                .setOAuthConsumerSecret("*******************************")
-                .setOAuthAccessToken("*****************************************")
-                .setOAuthAccessTokenSecret("*********************************");
-        twitter = new TwitterFactory(cb.build()).getInstance();
+        twitter = new TwitterFactory().getInstance();
     }
 
     /**
